@@ -1,0 +1,142 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Rotating background */
+.background {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glassmorphism container */
+/* .container {
+  width: 100%;
+  max-width: 650px;
+}
+
+.glass {
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+} */
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1f2937;
+  font-size: 28px;
+}
+
+h3 {
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+input,
+select,
+button{
+  padding: 13px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+   width: 100%;
+  max-width: 420px; 
+}
+
+input::placeholder {
+  color: #6b7280;
+}
+
+input:focus,
+select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+/* Button */
+button {
+  margin-top: 5px;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.45);
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Itinerary section */
+.itinerary {
+  margin-top: 30px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.itinerary p {
+  white-space: pre-line;
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+/* Scrollbar (subtle) */
+.itinerary::-webkit-scrollbar {
+  width: 6px;
+}
+
+.itinerary::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .glass {
+    padding: 24px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
